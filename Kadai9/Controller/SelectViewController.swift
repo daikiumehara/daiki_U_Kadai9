@@ -7,10 +7,21 @@
 
 import UIKit
 
-class SelectViewController: UIViewController {
+typealias SelectedString = (String) -> Void
+
+protocol SelectStringProtocol: NSObject {
+    var selectedString: SelectedString! { get set }
+
+    func setSelectedString(_ selectedString: @escaping SelectedString)
+}
+
+class SelectViewController: UIViewController, SelectStringProtocol {
+
+    var selectedString: SelectedString!
+
     @IBOutlet private var nameButtons: [NameButton]!
 
-    let names = ["東京都", "神奈川県", "埼玉県", "千葉県"]
+    private let names = ["東京都", "神奈川県", "埼玉県", "千葉県"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +31,19 @@ class SelectViewController: UIViewController {
             }
             button.conigure(names[self.nameButtons.firstIndex(of: button)!])
         }
+    }
+
+    func setSelectedString(_ selectedString: @escaping SelectedString) {
+        self.selectedString = selectedString
+    }
+
+    @IBAction private func didTapNameButton(_ sender: NameButton) {
+        let name = sender.getName()
+        selectedString(name)
+    }
+
+    @IBAction private func didTapCancelButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }
 

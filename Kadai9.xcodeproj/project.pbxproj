@@ -105,10 +105,8 @@
 		A61D910B26C565E10038CDE2 /* Kadai9 */ = {
 			isa = PBXGroup;
 			children = (
-				A61D914026C579A60038CDE2 /* Protocol */,
 				A61D913F26C5799D0038CDE2 /* Controller */,
 				A61D913D26C579610038CDE2 /* View */,
-				A61D913C26C5795B0038CDE2 /* Model */,
 				A61D910C26C565E10038CDE2 /* AppDelegate.swift */,
 				A61D910E26C565E10038CDE2 /* SceneDelegate.swift */,
 				A61D911526C565EE0038CDE2 /* Assets.xcassets */,
@@ -136,13 +134,6 @@
 			path = Kadai9UITests;
 			sourceTree = "<group>";
 		};
-		A61D913C26C5795B0038CDE2 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		A61D913D26C579610038CDE2 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,13 +151,6 @@
 				A61D914126C57A3D0038CDE2 /* SelectViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		A61D914026C579A60038CDE2 /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Protocol;
 			sourceTree = "<group>";
 		};
 		A61D914526C57E3F0038CDE2 /* NameButton */ = {

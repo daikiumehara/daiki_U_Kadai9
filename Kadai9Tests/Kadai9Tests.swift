@@ -10,8 +10,12 @@ import XCTest
 
 class Kadai9Tests: XCTestCase {
 
+    var nameButton: NameButton!
+
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.nameButton = NameButton()
+        nameButton.conigure("東京都")
     }
 
     override func tearDownWithError() throws {
@@ -19,8 +23,7 @@ class Kadai9Tests: XCTestCase {
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertEqual(nameButton.getName(), "東京都")
     }
 
     func testPerformanceExample() throws {
