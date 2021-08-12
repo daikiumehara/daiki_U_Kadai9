@@ -8,7 +8,7 @@
 import UIKit
 
 class NameButton: UIButton {
-    private var name: String!
+    private var name: String = "none"
 
     init() {
         super.init(frame: .zero)

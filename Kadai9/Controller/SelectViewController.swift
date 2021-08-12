@@ -7,14 +7,6 @@
 
 import UIKit
 
-typealias SelectedString = (String) -> Void
-
-protocol SelectStringProtocol: NSObject {
-    var selectedString: SelectedString! { get set }
-
-    func setSelectedString(_ selectedString: @escaping SelectedString)
-}
-
 class SelectViewController: UIViewController, SelectStringProtocol {
 
     var selectedString: SelectedString!
