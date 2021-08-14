@@ -16,28 +16,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTf-mm-GSj" customClass="NameButton" customModule="Kadai9" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PTf-mm-GSj">
                                 <rect key="frame" x="184" y="84" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="didTapNameButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="frw-XH-CdB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3e7-z8-BFI" customClass="NameButton" customModule="Kadai9" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3e7-z8-BFI">
                                 <rect key="frame" x="184" y="224" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="didTapNameButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FJA-ob-RJ0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8q-A3-tTU" customClass="NameButton" customModule="Kadai9" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8q-A3-tTU">
                                 <rect key="frame" x="184" y="294" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="didTapNameButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0gH-oR-ltX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhV-AH-YhA" customClass="NameButton" customModule="Kadai9" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhV-AH-YhA">
                                 <rect key="frame" x="184" y="154" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -68,10 +68,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outletCollection property="nameButtons" destination="PTf-mm-GSj" collectionClass="NSMutableArray" id="zSO-33-SOu"/>
-                        <outletCollection property="nameButtons" destination="uhV-AH-YhA" collectionClass="NSMutableArray" id="KWw-Dw-K45"/>
-                        <outletCollection property="nameButtons" destination="3e7-z8-BFI" collectionClass="NSMutableArray" id="74b-Rq-ggs"/>
-                        <outletCollection property="nameButtons" destination="G8q-A3-tTU" collectionClass="NSMutableArray" id="orx-Wz-feX"/>
+                        <outlet property="button1" destination="PTf-mm-GSj" id="Zeu-Jh-lBQ"/>
+                        <outlet property="button2" destination="3e7-z8-BFI" id="pIP-cc-dIz"/>
+                        <outlet property="button3" destination="G8q-A3-tTU" id="EJO-gr-WZM"/>
+                        <outlet property="button4" destination="uhV-AH-YhA" id="bCg-Y2-29a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

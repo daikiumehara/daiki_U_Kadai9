@@ -9,8 +9,8 @@ import Foundation
 
 typealias SelectedString = (String) -> Void
 
-protocol SelectStringProtocol: NSObject {
-    var selectedString: SelectedString! { get set }
+protocol SelectStringProtocol {
+    var selectedString: SelectedString { get set }
 
     func setSelectedString(_ selectedString: @escaping SelectedString)
 }

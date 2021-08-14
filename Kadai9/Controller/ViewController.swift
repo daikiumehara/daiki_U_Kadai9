@@ -23,6 +23,7 @@ class ViewController: UIViewController {
                 return
             }
             self.name = name
+            self.dismiss(animated: true, completion: nil)
         }
         nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: true, completion: nil)

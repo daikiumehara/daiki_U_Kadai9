@@ -9,28 +9,35 @@ import UIKit
 
 class SelectViewController: UIViewController, SelectStringProtocol {
 
-    var selectedString: SelectedString!
+    var selectedString: SelectedString = { _ in }
 
-    @IBOutlet private var nameButtons: [NameButton]!
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    @IBOutlet weak var button3: UIButton!
+    @IBOutlet weak var button4: UIButton!
+
+    private var nameButtons: [UIButton] {
+        [button1, button2, button3, button4]
+    }
 
     private let names = ["東京都", "神奈川県", "埼玉県", "千葉県"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameButtons.forEach { [weak self] button in
-            guard let self = self else {
-                return
+
+        zip(nameButtons, names)
+            .forEach { button, name in
+                button.setTitle(name, for: .normal)
             }
-            button.conigure(names[self.nameButtons.firstIndex(of: button)!])
-        }
     }
 
     func setSelectedString(_ selectedString: @escaping SelectedString) {
         self.selectedString = selectedString
     }
 
-    @IBAction private func didTapNameButton(_ sender: NameButton) {
-        let name = sender.getName()
+    @IBAction private func didTapNameButton(_ sender: UIButton) {
+        guard let name = zip(nameButtons, names)
+                .first(where: { button, name in button === sender })?.1 else { return }
         selectedString(name)
     }
 

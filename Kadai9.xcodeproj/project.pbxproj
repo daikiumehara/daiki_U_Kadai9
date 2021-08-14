@@ -17,7 +17,6 @@
 		A61D912F26C565F00038CDE2 /* Kadai9UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61D912E26C565F00038CDE2 /* Kadai9UITests.swift */; };
 		A61D914226C57A3D0038CDE2 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61D914126C57A3D0038CDE2 /* SelectViewController.swift */; };
 		A61D914426C57A630038CDE2 /* Select.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A61D914326C57A630038CDE2 /* Select.storyboard */; };
-		A61D914726C57E740038CDE2 /* NameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61D914626C57E740038CDE2 /* NameButton.swift */; };
 		A61D914B26C5975E0038CDE2 /* NameButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61D914A26C5975D0038CDE2 /* NameButtonTests.swift */; };
 		A61D914E26C598130038CDE2 /* SelectedStringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61D914D26C598130038CDE2 /* SelectedStringProtocol.swift */; };
 /* End PBXBuildFile section */
@@ -56,7 +55,6 @@
 		A61D913026C565F00038CDE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A61D914126C57A3D0038CDE2 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 		A61D914326C57A630038CDE2 /* Select.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Select.storyboard; sourceTree = "<group>"; };
-		A61D914626C57E740038CDE2 /* NameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameButton.swift; sourceTree = "<group>"; };
 		A61D914A26C5975D0038CDE2 /* NameButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameButtonTests.swift; sourceTree = "<group>"; };
 		A61D914D26C598130038CDE2 /* SelectedStringProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedStringProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,7 +141,6 @@
 		A61D913D26C579610038CDE2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A61D914526C57E3F0038CDE2 /* NameButton */,
 				A61D911226C565E10038CDE2 /* Main.storyboard */,
 				A61D914326C57A630038CDE2 /* Select.storyboard */,
 			);
@@ -157,14 +154,6 @@
 				A61D914126C57A3D0038CDE2 /* SelectViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		A61D914526C57E3F0038CDE2 /* NameButton */ = {
-			isa = PBXGroup;
-			children = (
-				A61D914626C57E740038CDE2 /* NameButton.swift */,
-			);
-			path = NameButton;
 			sourceTree = "<group>";
 		};
 		A61D914C26C597FD0038CDE2 /* Protocol */ = {
@@ -308,7 +297,6 @@
 			files = (
 				A61D914226C57A3D0038CDE2 /* SelectViewController.swift in Sources */,
 				A61D914E26C598130038CDE2 /* SelectedStringProtocol.swift in Sources */,
-				A61D914726C57E740038CDE2 /* NameButton.swift in Sources */,
 				A61D911126C565E10038CDE2 /* ViewController.swift in Sources */,
 				A61D910D26C565E10038CDE2 /* AppDelegate.swift in Sources */,
 				A61D910F26C565E10038CDE2 /* SceneDelegate.swift in Sources */,
