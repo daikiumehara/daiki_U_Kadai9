@@ -17,16 +17,15 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapSelectButton(_ sender: Any) {
-        let nextVC = SelectViewController.instantiate()
-        nextVC.setSelectedString { [weak self] name in
-            guard let self = self else {
-                return
+        let nextVC = NamePickerViewControllerFactory().instantiate(
+            didSelectHandler: { [weak self] name in
+                self?.name = name
+                self?.dismiss(animated: true, completion: nil)
             }
-            self.name = name
-            self.dismiss(animated: true, completion: nil)
-        }
+        )
+
         nextVC.modalPresentationStyle = .fullScreen
+
         self.present(nextVC, animated: true, completion: nil)
     }
 }
-

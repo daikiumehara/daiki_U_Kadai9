@@ -7,9 +7,9 @@
 
 import UIKit
 
-class SelectViewController: UIViewController, SelectStringProtocol {
+class SelectViewController: UIViewController {
 
-    var selectedString: SelectedString = { _ in }
+    private var selectedString: DidSelectHandler = { _ in }
 
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -31,10 +31,6 @@ class SelectViewController: UIViewController, SelectStringProtocol {
             }
     }
 
-    func setSelectedString(_ selectedString: @escaping SelectedString) {
-        self.selectedString = selectedString
-    }
-
     @IBAction private func didTapNameButton(_ sender: UIButton) {
         guard let name = zip(nameButtons, names)
                 .first(where: { button, name in button === sender })?.1 else { return }
@@ -47,11 +43,12 @@ class SelectViewController: UIViewController, SelectStringProtocol {
 }
 
 extension SelectViewController {
-    static func instantiate() -> SelectViewController {
+    static func instantiate(didSelectHandler: @escaping DidSelectHandler) -> SelectViewController {
         guard let initialVC = UIStoryboard.init(name: "Select", bundle: nil)
                 .instantiateInitialViewController() as? SelectViewController else {
             fatalError("Storyboardが見つかりませんでした")
         }
+        initialVC.selectedString = didSelectHandler
         return initialVC
     }
 }
