@@ -5,12 +5,12 @@
 //  Created by daiki umehara on 2021/08/13.
 //
 
-import Foundation
+import UIKit
 
-typealias SelectedString = (String) -> Void
+typealias DidSelectHandler = (String) -> Void
 
-protocol SelectStringProtocol: NSObject {
-    var selectedString: SelectedString! { get set }
-
-    func setSelectedString(_ selectedString: @escaping SelectedString)
+struct NamePickerViewControllerFactory {
+    func instantiate(didSelectHandler: @escaping DidSelectHandler) -> UIViewController {
+        SelectViewController.instantiate(didSelectHandler: didSelectHandler)
+    }
 }
